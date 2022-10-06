@@ -4,5 +4,5 @@ from articles import views
 
 
 urlpatterns = [
-    path('',views.article_list), #whenever .com url for the home page
+    path('',views.article_list),
 ]
