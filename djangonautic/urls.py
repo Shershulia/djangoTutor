@@ -11,8 +11,10 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('articles/', include('articles.urls') ),
+    path('accounts/', include('accounts.urls') ),
     path('about/',views.about), # ^ beginning of the address space, $ is the finish of the line
     path('',views.homepage), #whenever .com url for the home page
+    
 ]
 
 urlpatterns+= staticfiles_urlpatterns()
