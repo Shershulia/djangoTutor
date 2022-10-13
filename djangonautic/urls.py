@@ -6,14 +6,14 @@ from djangonautic import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static 
 from django.conf import settings    
-
+from articles import views as article_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('articles/', include('articles.urls') ),
     path('accounts/', include('accounts.urls') ),
-    path('about/',views.about), # ^ beginning of the address space, $ is the finish of the line
-    path('',views.homepage), #whenever .com url for the home page
+    path('about/',views.about), 
+    path('',article_views.article_list, name="home"), #whenever .com url for the home page
     
 ]
 
